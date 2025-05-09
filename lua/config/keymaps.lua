@@ -91,7 +91,12 @@ function M.after()
 
 			vim.keymap.set("n", "<leader>fr", telescope.lsp_references, opts)
 			vim.keymap.set("n", "<leader>fs", telescope.lsp_document_symbols, opts)
-			vim.keymap.set("n", "<leader>fS", telescope.lsp_workspace_symbols, opts)
+			vim.keymap.set("n", "<leader>fS",
+				function()
+					telescope.lsp_workspace_symbols({
+						symbols = { "class", "function", "method" }
+					})
+				end, opts)
 			vim.keymap.set("n", "<leader>fd", telescope.diagnostics, opts)
 		end
 	})
