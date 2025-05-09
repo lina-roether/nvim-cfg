@@ -16,10 +16,8 @@ return {
 		}
 	},
 	config = function(_, opts)
-		local lsp = require("lsp");
 		local mason_lspconfig = require("mason-lspconfig")
 
 		mason_lspconfig.setup(opts);
-		mason_lspconfig.setup_handlers { lsp.setup }
 	end
 }
