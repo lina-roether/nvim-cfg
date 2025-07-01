@@ -14,6 +14,7 @@ local M = {}
 
 function M.setup()
 	register_filetype("*.wgsl", "wgsl");
+	register_filetype("*.sticker", "sticker");
 end
 
 function M.after() end
