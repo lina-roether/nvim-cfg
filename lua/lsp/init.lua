@@ -9,6 +9,7 @@ local special_configs = {
 	ts_ls = require("lsp.config.disable_formatting"),
 	svelte = require("lsp.config.disable_formatting"),
 	ltex = require("lsp.config.ltex"),
+	wgsl_analyzer = require("lsp.config.wgsl_analyzer")
 }
 
 local capabilities = cmp_nvim_lsp.default_capabilities()
